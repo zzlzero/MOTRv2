@@ -65,7 +65,7 @@ class DetMOTDetection:
                     x, y, w, h = map(float, (xywh))
                     self.labels_full[vid][t].append([x, y, w, h, i, crowd])
 
-        add_mot_folder("DanceTrack/train")
+        add_mot_folder("UAVDT/train")
         vid_files = list(self.labels_full.keys())
 
         self.indices = []

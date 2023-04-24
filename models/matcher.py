@@ -77,7 +77,7 @@ class HungarianMatcher(nn.Module):
 
             # Also concat the target labels and boxes
             if isinstance(targets[0], Instances):
-                tgt_ids = torch.cat([gt_per_img.labels for gt_per_img in targets])
+                tgt_ids = torch.cat([gt_per_img.labels.to(torch.long) for gt_per_img in targets])
                 tgt_bbox = torch.cat([gt_per_img.boxes for gt_per_img in targets])
             else:
                 tgt_ids = torch.cat([v["labels"] for v in targets])

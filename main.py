@@ -142,12 +142,12 @@ def get_args_parser():
                         help='start epoch')
     parser.add_argument('--eval', action='store_true')
     parser.add_argument('--vis', action='store_true')
-    parser.add_argument('--num_workers', default=2, type=int)
+    parser.add_argument('--num_workers', default=4, type=int)
     parser.add_argument('--pretrained', default=None, help='resume from checkpoint')
     parser.add_argument('--cache_mode', default=False, action='store_true', help='whether to cache images on memory')
 
     # end-to-end mot settings.
-    parser.add_argument('--mot_path', default='/data/Dataset/mot', type=str)
+    parser.add_argument('--mot_path', default='/disk1/zzl/MOTRv2/data/Dataset/mot', type=str)
     parser.add_argument('--det_db', default='', type=str)
     parser.add_argument('--input_video', default='figs/demo.mp4', type=str)
     parser.add_argument('--data_txt_path_train',
